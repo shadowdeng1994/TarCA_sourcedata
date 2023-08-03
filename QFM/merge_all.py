@@ -9,7 +9,7 @@ tmpl = {"QFM":1, "sampling method":"1", "rep":1, "tip":1, "pop_size_act":1, "pop
 path = "D:/SYSU/helab/TCA/QFM/"
 
 def read_act(fate_map_id, map_dict):
-    path_act = path + "progenitor_population_size_act\\pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
+    path_act = path + "progenitor_population_size_act/pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
     file_act = open(path_act)
     csv_act = csv.reader(file_act)
     for line in csv_act:
@@ -30,7 +30,7 @@ def read_act(fate_map_id, map_dict):
     return map_dict
 
 def read_source(fate_map_id, map_dict):
-    path_act = path + "progenitor_population_size\\tip_pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
+    path_act = path + "progenitor_population_size/tip_pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
     file_act = open(path_act)
     csv_act = csv.reader(file_act)
     for line in csv_act:
@@ -41,7 +41,7 @@ def read_source(fate_map_id, map_dict):
     return map_dict
 
 def read_cor(fate_map_id, map_dict):
-    path_act = path + "progenitor_population_size_cor\\cor_pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
+    path_act = path + "progenitor_population_size_cor/cor_pop_size_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
     file_act = open(path_act)
     csv_act = csv.reader(file_act)
     for line in csv_act:
@@ -52,7 +52,7 @@ def read_cor(fate_map_id, map_dict):
     return map_dict
 
 def read_bias(fate_map_id, map_dict):
-    path_act = path + "progenitor_bias\\tip_bias_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
+    path_act = path + "progenitor_bias/tip_bias_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
     file_act = open(path_act)
     csv_act = csv.reader(file_act)
     for line in csv_act:
@@ -63,7 +63,7 @@ def read_bias(fate_map_id, map_dict):
     return map_dict
 
 def read_prop(fate_map_id, map_dict):
-    path_act = path + "fraction\\fraction_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
+    path_act = path + "fraction/fraction_fate_map" + str(fate_map_id).rjust(4, '0') + ".csv"
     file_act = open(path_act)
     csv_act = csv.reader(file_act)
     for line in csv_act:
@@ -77,7 +77,7 @@ def read_prop(fate_map_id, map_dict):
 
 
 def read_tca(tca_id, map_dict):
-    path_tca = path + "TCA_population_size\\" + str(tca_id).rjust(4, '0') + ".csv"
+    path_tca = path + "TCA_population_size/" + str(tca_id).rjust(4, '0') + ".csv"
     file_tca = open(path_tca)
     csv_tca = csv.reader(file_tca)
     fate_map_id = ((tca_id - 1) % 331) + 1
